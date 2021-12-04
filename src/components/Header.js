@@ -1,6 +1,5 @@
 import React from "react";
 import NavBar from "./NavBar";
-import styled from "styled-components";
 import "./header.css";
 
 // const Background = styled.div`
