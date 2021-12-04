@@ -17,6 +17,7 @@ const Navigation = styled.section`
   padding: 20px 40px;
 
   a {
+    color: black;
     text-align: center;
   }
 
