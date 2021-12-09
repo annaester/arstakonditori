@@ -7,7 +7,7 @@ const Footerinfo = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fef8e8;
+  background-color: #f8c232;
 
   h4 {
     margin: 2px;

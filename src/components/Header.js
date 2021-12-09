@@ -1,29 +1,39 @@
 import React from "react";
 import NavBar from "./NavBar";
-import "./header.css";
+import styled from "styled-components";
 
-// const Background = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-// `;
+const HeaderBox = styled.section`
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
+const BackgroundImg = styled.image`
+  background-image: url("./pictures/bakery front.jpeg");
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  z-index: -1;
+`;
+const Logo = styled.image`
+  background-image: url("./pictures/loga.jpg");
+  position: absolute;
+  border-radius: 50%;
+  border: 7px solid white;
+  margin-bottom: -90px;
+  width: 320px;
+  height: 320px;
+`;
 
 const Header = () => {
   return (
     <div>
-      <section className="header-box">
-        <img
-          className="backgroundImg"
-          src="./pictures/bakery front.jpeg"
-          alt="backgroundimg"
-        />
-        <img
-          className="logo"
-          src="./pictures/loga.jpg"
-          alt="logo"
-          width="300px"
-        />
-      </section>
+      <HeaderBox>
+        <BackgroundImg alt="backgroundimg" />
+        <Logo alt="logo" />
+      </HeaderBox>
       <NavBar />
     </div>
   );

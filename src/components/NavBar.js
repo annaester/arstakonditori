@@ -13,7 +13,7 @@ const Navigation = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   margin: 0;
-  background: #fef8e8;
+  background: #f8c232;
   padding: 20px 40px;
 
   a {
@@ -26,7 +26,7 @@ const Navigation = styled.section`
   }
 
   a:hover {
-    color: orange;
+    color: white;
   }
 `;
 
