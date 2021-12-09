@@ -10,7 +10,7 @@ const HeaderBox = styled.section`
   justify-content: flex-end;
 `;
 
-const BackgroundImg = styled.image`
+const BackgroundImage = styled.image`
   background-image: url("./pictures/bakery front.jpeg");
   width: 100%;
   height: 500px;
@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <div>
       <HeaderBox>
-        <BackgroundImg alt="backgroundimg" />
+        <BackgroundImage />
         <Logo alt="logo" />
       </HeaderBox>
       <NavBar />

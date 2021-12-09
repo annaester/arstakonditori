@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import NavBarMobile from "./NavBarMobile";
 
 const HomeScreen = styled.div`
   display: flex;
@@ -26,10 +27,13 @@ const HomeScreen = styled.div`
 
 const Mobile = () => {
   return (
-    <HomeScreen>
-      <p>Hello from mobile</p>
-      <img src="./pictures/budapest.jpeg" alt="backgroung" />
-    </HomeScreen>
+    <>
+      <NavBarMobile />
+      <HomeScreen>
+        <p></p>
+        <img src="./pictures/budapest.jpeg" alt="backgroung" />
+      </HomeScreen>
+    </>
   );
 };
 

@@ -16,7 +16,17 @@ export const App = () => {
 
   return (
     <>
-      {isMobile && <Mobile />}
+      {isMobile && (
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Mobile />} />
+            <Route path="/omoss" element={<OmOss />} />
+            <Route path="/bullar" element={<BullarBrod />} />
+            <Route path="/konditori" element={<Konditori />} />
+            <Route path="/kontakt" element={<Kontakt />} />
+          </Routes>
+        </BrowserRouter>
+      )}
       {isTabletOrBigger && (
         <BrowserRouter>
           <main>
