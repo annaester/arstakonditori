@@ -34,7 +34,7 @@ const NavBarMobile = () => {
 
   const closeIcon = <VscClose size="40px" onClick={() => setOpen(!open)} />;
 
-  const closemobnav = () => setOpen(false);
+  // const closemobnav = () => setOpen(false);
 
   return (
     <MobileNavBox>
