@@ -7,7 +7,7 @@ import BullarBrod from "components/BullarBrod";
 import Konditori from "components/Konditori";
 import Kontakt from "components/Kontakt";
 import Footer from "components/Footer";
-import Mobile from "components/Mobile";
+import MobileFirstP from "components/Mobilecomponents/MobileFirstP";
 import OmOss from "components/OmOss";
 
 export const App = () => {
@@ -19,7 +19,7 @@ export const App = () => {
       {isMobile && (
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Mobile />} />
+            <Route path="/" element={<MobileFirstP />} />
             <Route path="/omoss" element={<OmOss />} />
             <Route path="/bullar" element={<BullarBrod />} />
             <Route path="/konditori" element={<Konditori />} />

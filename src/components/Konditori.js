@@ -2,6 +2,8 @@ import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import styled from "styled-components";
+import { useMediaQuery } from "react-responsive";
+import MobileKonditori from "./Mobilecomponents/MobileKonditori";
 
 const BildSlider = styled.img`
   width: 500px;
@@ -40,23 +42,32 @@ const BakBox = styled.section`
 `;
 
 const Konditori = () => {
-  return (
-    <BakBox>
-      <div>
-        <p>Vi bakar svenska klassiker bla:</p>
-        <ul>
-          <li>Dammsugare</li>
-          <li>Mazariner</li>
-          <li>Klenäter</li>
-          <li>Biskvier</li>
-          <li>Småkakor</li>
-          <li>Budapestrulle</li>
-        </ul>
-        <p>Även tårtor, bakelser och säsongsbaserade bakverk.</p>
-      </div>
+  const isMobile = useMediaQuery({ query: "(max-width: 775px)" });
+  const isTabletOrBigger = useMediaQuery({ query: "(min-width: 776px)" });
 
-      <KonditoriGallery />
-    </BakBox>
+  return (
+    <>
+      {isMobile && <MobileKonditori />}
+
+      {isTabletOrBigger && (
+        <BakBox>
+          <div>
+            <p>Vi bakar svenska klassiker bla:</p>
+            <ul>
+              <li>Dammsugare</li>
+              <li>Mazariner</li>
+              <li>Klenäter</li>
+              <li>Biskvier</li>
+              <li>Småkakor</li>
+              <li>Budapestrulle</li>
+            </ul>
+            <p>Även tårtor, bakelser och säsongsbaserade bakverk.</p>
+          </div>
+
+          <KonditoriGallery />
+        </BakBox>
+      )}
+    </>
   );
 };
 

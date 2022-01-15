@@ -10,14 +10,14 @@ const HeaderBox = styled.section`
   justify-content: flex-end;
 `;
 
-const BackgroundImage = styled.image`
+const BackgroundImage = styled.img`
   background-image: url("./pictures/bakery front.jpeg");
   width: 100%;
   height: 500px;
   object-fit: cover;
   z-index: -1;
 `;
-const Logo = styled.image`
+const Logo = styled.img`
   background-image: url("./pictures/loga.jpg");
   position: absolute;
   border-radius: 50%;

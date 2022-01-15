@@ -2,6 +2,8 @@ import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import styled from "styled-components";
+import MobileBuBr from "./Mobilecomponents/MobileBuBr";
+import { useMediaQuery } from "react-responsive";
 
 const BildSlider = styled.img`
   width: 500px;
@@ -38,22 +40,30 @@ const BakBox = styled.section`
 `;
 
 const BullarBrod = () => {
-  return (
-    <BakBox>
-      <div>
-        <p>Dagsfärsktbröd varje dag. Ett urval av vårt sortiment:</p>
-        <ul>
-          <li>Limpor</li>
-          <li>Frallor</li>
-          <li>Bullar</li>
-          <li>Semlor</li>
-          <li>Släta bullar</li>
-          <li>Kransar</li>
-        </ul>
-      </div>
+  const isMobile = useMediaQuery({ query: "(max-width: 775px)" });
+  const isTabletOrBigger = useMediaQuery({ query: "(min-width: 776px)" });
 
-      <BrodGallery />
-    </BakBox>
+  return (
+    <>
+      {isMobile && <MobileBuBr />}
+      {isTabletOrBigger && (
+        <BakBox>
+          <div>
+            <p>Dagsfärsktbröd varje dag. Ett urval av vårt sortiment:</p>
+            <ul>
+              <li>Limpor</li>
+              <li>Frallor</li>
+              <li>Bullar</li>
+              <li>Semlor</li>
+              <li>Släta bullar</li>
+              <li>Kransar</li>
+            </ul>
+          </div>
+
+          <BrodGallery />
+        </BakBox>
+      )}
+    </>
   );
 };
 

@@ -34,14 +34,14 @@ const NavBarMobile = () => {
 
   const closeIcon = <VscClose size="40px" onClick={() => setOpen(!open)} />;
 
-  const closeMobNav = () => setOpen(false);
+  const closemobnav = () => setOpen(false);
 
   return (
     <MobileNavBox>
       {open ? closeIcon : hamburgerIcon}
       {open && (
         <>
-          <NavText to="/" closeMobNav={closeMobNav}>
+          <NavText to="/" closemobnav="closemobnav">
             HEM
           </NavText>
           <NavText to="/bullar">BRÖD &amp; BULLAR</NavText>
